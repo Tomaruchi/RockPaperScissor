@@ -1,0 +1,160 @@
+* {
+    /* Universal Selector */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(IMG/bac1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    height: 600px;
+    width: 800px;
+    background-color: #F0F2E5;
+    /* Hexadecimal color */
+    border-radius: 20px;
+    box-shadow: 1px 1px 60px rgba(0, 0, 0, 0.5);
+    /* Red Green Blue Alpha */
+}
+
+header {
+    font-size: 55px;
+    /* Increased size for more impact */
+    font-weight: bold;
+    word-spacing: 10px;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(227, 49, 35, 0.5);
+    animation: pop 2s infinite;
+}
+
+/* Add an animation effect */
+@keyframes pop {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Normal size */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Slightly enlarged */
+    }
+}
+
+button {
+    height: 90px;
+    width: 90px;
+    font-size: 55px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.result .user-choice,
+/* Group Selector */
+.computer-choice {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-choice h2 {
+    margin-left: -10px;
+}
+
+.computer-choice h2 {
+    position: relative;
+    right: -80px;
+}
+
+.vs {
+    font-size: 40px;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.vs.show {
+    /*CSS class hai jo typically kisi element ko dikhane ya visible banane ke liye use hoti hai. */
+    visibility: visible;
+    opacity: 1;
+}
+
+#user-choice,
+#computer-choice {
+    height: 230px;
+    width: 230px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#user-choice {
+    position: relative;
+    left: -50px;
+}
+
+#computer-choice {
+    position: relative;
+    left: 70px;
+}
+
+#text {
+    font-size: 70px;
+    text-align: center;
+    margin-top: -200px;
+    opacity: 0;
+    animation: Text 3s forwards;
+    text-shadow: 5px 5px 5px rgba(128, 128, 128, 0.822);
+}
+
+@keyframes Text {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+#outcome {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imges img {
+    display: none;
+}
